@@ -1,0 +1,13 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass-mobile": "sass --watch ./scss/mobile.scss ./css/mobile.css",
+    "sass-desktop": "sass --watch ./scss/desktop.scss ./css/desktop.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

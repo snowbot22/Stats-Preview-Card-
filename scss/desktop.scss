@@ -1,0 +1,132 @@
+/*
+*ABSTRACT
+*/
+@use "abstract/variables" as var;
+@use "abstract/functions" as funct;
+
+/*
+*COMPONENTS
+*/
+@use "components/border-radius" as radius;
+@use "components/flex" as flex;
+@use "components/typography" as typo;
+
+/*
+*GLOBAL
+*/
+@import "global/normalize";
+
+
+html{
+    font-size: 60.5%;
+}
+/*
+*CONTAINER GRID
+*/
+.container{
+    display: grid;
+    background-color: funct.colors(Very-dark-blue-main-background);
+    grid-template-columns: repeat(4, 25vw);
+    grid-template-rows: repeat(2, 50vh);
+    min-width: 320px;
+}
+
+/*
+*CARD
+*/
+.card{
+    background-color: funct.colors(Dark-desaturated-blue-card-background);
+    grid-column: 1/5;
+    grid-row: 1/3;
+    width: 90%;
+    height: 500px;
+    place-self: center;
+    min-height: 639px;
+    min-width: 250px;
+    @include flex.flex-rowreverse-nowrap(0,center,0rem);
+    @extend %card-radius-mobile;
+}
+
+/*
+*IMAGE
+*/
+.card__picture{
+    width: 45%;
+    height: 100%;
+    position: relative;
+    &--img{
+        width: 100%;
+        height: 100%;
+        @extend %radius-img-desktop;
+    }
+}
+.bg--purple{
+    background-color: funct.colors(Soft-violet-accent);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.5;
+    @extend %radius-img-desktop;
+}
+
+/*
+*TEXT CONTAINER
+*/
+.card__text{
+    text-align: left;
+    display: grid;
+    place-content: center;
+    gap: 3rem;
+    padding:  0 10rem 0 8rem;
+    width: 55%;
+    height: 100%;
+    &--title{
+        @include typo.typo(3rem, var.$Inter, funct.colors(White-main-heading-stats), bolder);
+    }
+    &--p{
+        @include typo.typo(1.5rem, var.$Inter, funct.colors(Slightly-transparent-white-stat-headings), normal);
+        line-height: 2.6rem;
+    }
+}
+
+/*
+*STATS CONTAINER
+*/
+.card__text__stats{
+    @include flex.flex-row-nowrap(0,center,3rem);
+    text-align:center;
+    padding-top: 4rem;
+    &--title{
+        @include typo.typo(1.8rem, var.$Inter, funct.colors(White-main-heading-stats), bolder);
+    }
+    &--p{
+        @include typo.typo(1.2rem, var.$Lexend, funct.colors(Slightly-transparent-white-stat-headings), bolder);
+        padding-top: .5rem;
+    }
+}
+
+/*
+*SPANS
+*/
+.purple--text{
+    color: funct.colors(Soft-violet-accent);
+}
+
+/*
+*MEDIA QUERY
+*/
+@media screen and (max-height: 635px) {
+    /*
+    *CONTAINER
+    */
+    .container{
+        background-color: var(--Very-dark-blue-main-background);
+        display: grid;
+        grid-template-columns: repeat(4, 25vw);
+        grid-template-rows: repeat(2, max-content);
+        font-size: 1.5rem;
+        min-width: 320px;
+        padding: 2rem 0;
+    }
+}

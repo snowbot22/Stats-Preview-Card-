@@ -1,0 +1,32 @@
+/*
+*FLEX COLUMN NO WRAP
+*/
+@mixin flex-column-nowrap ($justify,$align, $gap) {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+/*
+*FLEX ROW REVERSE NO WRAP
+*/
+@mixin flex-rowreverse-nowrap ($justify, $align, $gap){
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+/*
+*FLEX ROW NOWRAP
+*/
+@mixin flex-row-nowrap ($justify, $align, $gap){
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}

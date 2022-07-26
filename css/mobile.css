@@ -1,0 +1,181 @@
+/*
+*COLORS
+*/
+/*
+*FONTS
+*/
+/*VARIABLES*/
+/* 
+*COLOR FUNCTION
+*/
+/*
+* IMAGES RADIUS MOBILE
+*/
+.card__picture--img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+/*
+*CARD RADIUS MOBILE
+*/
+.card {
+  border-radius: 1rem;
+}
+
+/*
+*FLEX COLUMN NO WRAP
+*/
+/*
+*TYPO
+*/
+/*
+*ABSTRACT
+*/
+/*
+*COMPONENTS
+*/
+/*
+*GLOBAL
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 60.5%;
+}
+
+/*
+*CONTAINER GRID
+*/
+.container {
+  display: grid;
+  background-color: hsl(233deg, 47%, 7%);
+  grid-template-columns: repeat(2, 50vw);
+  grid-template-rows: repeat(2, 50vh);
+  min-width: 320px;
+}
+
+/*
+*CARD
+*/
+.card {
+  background-color: hsl(244deg, 37%, 16%);
+  grid-column: 1/3;
+  grid-row: 1/3;
+  width: 90%;
+  height: 90%;
+  place-self: center;
+  min-height: 639px;
+  max-width: 340px;
+  min-width: 250px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+/*
+*IMAGE
+*/
+.card__picture {
+  width: 100%;
+  height: 30%;
+  position: relative;
+}
+.card__picture--img {
+  width: 100%;
+  height: 100%;
+}
+
+.bg--purple {
+  background-color: hsl(277deg, 64%, 61%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+  border-radius: 1rem;
+}
+
+/*
+*TEXT CONTAINER
+*/
+.card__text {
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: 0;
+  align-items: 0;
+  gap: 1rem;
+  padding: 0rem 2.5rem;
+}
+.card__text--title {
+  font-size: 2.3rem;
+  font-family: "Inter";
+  color: hsl(0deg, 0%, 100%);
+  font-weight: bolder;
+  padding: 0rem 1.5rem;
+}
+.card__text--p {
+  font-size: 1.2rem;
+  font-family: "Inter";
+  color: hsla(0deg, 0%, 100%, 0.6);
+  font-weight: normal;
+  line-height: 2.6rem;
+}
+
+/*
+*STATS CONTAINER
+*/
+.card__text__stats {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: 0;
+  align-items: 0;
+  gap: 2.5rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+.card__text__stats--title {
+  font-size: 1.8rem;
+  font-family: "Inter";
+  color: hsl(0deg, 0%, 100%);
+  font-weight: bolder;
+}
+.card__text__stats--p {
+  font-size: 1.2rem;
+  font-family: "Lexend Deca";
+  color: hsla(0deg, 0%, 100%, 0.6);
+  font-weight: bolder;
+  padding-top: 0.5rem;
+}
+
+/*
+*SPANS
+*/
+.purple--text {
+  color: hsl(277deg, 64%, 61%);
+}
+
+/*
+*MEDIA QUERY
+*/
+@media screen and (max-height: 635px) {
+  /*
+  *CONTAINER
+  */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 50vw);
+    grid-template-rows: repeat(2, max-content);
+    min-width: 320px;
+    padding: 2rem 0;
+  }
+}
+
+/*# sourceMappingURL=mobile.css.map */

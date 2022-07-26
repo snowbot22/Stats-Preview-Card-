@@ -1,0 +1,10 @@
+/*VARIABLES*/
+@use "variables.scss" as var;
+
+/* 
+*COLOR FUNCTION
+*/
+@function colors($color) {
+    @return map-get($map: var.$colors, $key:$color ) 
+};
+

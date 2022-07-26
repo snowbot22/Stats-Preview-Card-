@@ -1,0 +1,12 @@
+@use  "../abstract/variables" as var;
+@use "../abstract/functions" as funct;
+
+/*
+*TYPO
+*/
+@mixin typo ($size,$family, $color, $weight) {
+    font-size: $size;
+    font-family: $family;
+    color: $color;
+    font-weight: $weight;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats Preview Card Component</title>
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 769px)">
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <picture class="card__picture">
+                <source srcset="images/image-header-desktop.jpg" media="screen and (min-width: 769px)">
+                <img class="card__picture--img" src="images/image-header-mobile.jpg" alt="card-image" />
+                <div class="bg--purple">
+
+                </div>
+            </picture>
+            <div class="card__text">
+                <h1 class="card__text--title">
+                    Get <span class="purple--text">insights</span> that help your business grow.
+                </h1>
+                <p class="card__text--p">
+                    Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+                    experience, and overall efficiency.
+                </p>
+                <div class="card__text__stats">
+                    <div class="card__text__stats--container">
+                        <h3 class="card__text__stats--title">
+                            10k+
+                        </h3>
+                        <p class="card__text__stats--p">
+                            COMPANIES
+                        </p>
+                    </div>
+                    <div class="card__text__stats--container">
+                        <h3 class="card__text__stats--title">
+                            314
+                        </h3>
+                        <p class="card__text__stats--p">
+                            TEMPLATES
+                        </p>
+                    </div>
+                    <div class="card__text__stats--container">
+                        <h3 class="card__text__stats--title">
+                            12M+
+                        </h3>
+                        <p class="card__text__stats--p">
+                            QUERIES
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
